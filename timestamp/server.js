@@ -28,15 +28,18 @@ app.get("/api/:date", function (req, res) {
   
   console.log(Number.isNaN(Number(myDate)));
 
-  if(Number.isNaN(Number(myDate)) == false){
+  if(myDate == "")
+  {
+    res.json({unix:  Date.now(), utc: new Date()});  
+  }
+  else if(Number.isNaN(Number(myDate)) == false){
     console.log("if");
     res.json({unix: Number(myDate), utc: new Date(Number(myDate))});  
   }
   else if((Date(myDate).toString != "Invalid Date") && (Date.parse(myDate) != NaN))
   {
-    res.json({unix: new Date(Date.parse(myDate)), utc: Date(myDate)}); 
+    res.json({unix: Date.parse(myDate), utc: new Date(myDate)}); 
     console.log("else if");
-   ;  
   }
   else{
     console.log("else");
@@ -44,6 +47,7 @@ app.get("/api/:date", function (req, res) {
   }
 
 });
+
 
 
 // listen for requests :)
