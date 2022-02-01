@@ -22,7 +22,7 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 
 // your first API endpoint... 
-app.get("/api/:date", function (req, res) {
+app.get("https://pksj.github.io/Free_Code_Camp_Courses/timestamp/views/api/:date", function (req, res) {
 
   const myDate = req.params.date;
   
