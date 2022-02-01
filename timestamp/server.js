@@ -20,13 +20,31 @@ app.get("/", function (req, res) {
 
 
 // your first API endpoint... 
-app.get("/api/2015-12-25", function (req, res) {
-  res.json({unix:new Date(0), utc: new Date()});
+
+// your first API endpoint... 
+app.get("/api/:date", function (req, res) {
+
+  const myDate = req.params.date;
+  
+  console.log(Number.isNaN(Number(myDate)));
+
+  if(Number.isNaN(Number(myDate)) == false){
+    console.log("if");
+    res.json({unix: Number(myDate), utc: new Date(Number(myDate))});  
+  }
+  else if((Date(myDate).toString != "Invalid Date") && (Date.parse(myDate) != NaN))
+  {
+    res.json({unix: new Date(Date.parse(myDate)), utc: Date(myDate)}); 
+    console.log("else if");
+   ;  
+  }
+  else{
+    console.log("else");
+    res.json({error : "Invalid Date"});
+  }
+
 });
 
-app.get("/api/1451001600000", function (req, res) {
-  res.json({unix:new Date(0), utc: new Date()});
-});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
