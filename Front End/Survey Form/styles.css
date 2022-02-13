@@ -109,7 +109,7 @@ textarea {
   box-sizing: border-box;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 720px) {
   form {
     width: 100%;
     padding: 50px 50px;
