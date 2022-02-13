@@ -4,115 +4,157 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Norman Borlaug</title>
-
+    <title>Survey form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-
-  <body>
-    <main id="main">
-      <h1 id="title">Dr. Norman Borlaug</h1>
-      <p>The man who saved a billion lives</p>
-      <div id="img-div">
-        <img
-          id="image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg"
-          alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"
+  <body >
+    <main>
+      <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+          <i>Thank you for taking the time to help us improve the platform</i>
+        </p>
+      </header>
+      <form id="survey-form" action="">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required />
+        <label id="email-label" for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your Email"
+          required
         />
-        <h4 id="img-caption">
-          Dr. Norman Borlaug, third from the left, trains biologists in Mexico
-          on how to increase wheat yields - part of his life-long war on hunger.
-        </h4>
-      </div>
+        <label id="number-label" for="number">Age(Optional)</label>
+        <input
+          id="number"
+          type="number"
+          placeholder="Age"
+          min="0"
+          max="100"
+          required
+        />
 
-      <h2 id="tribute-info">Here's a time line of Dr. Borlaug's life:</h2>
-      <ul>
-        <li><b>1914</b> - Born in Cresco, Iowa</li>
-        <li>
-          <b>1933 </b>- Leaves his family's farm to attend the University of
-          Minnesota, thanks to a Depression era program known as the "National
-          Youth Administration"
-        </li>
-        <li>
-          <b>1935</b>- Has to stop school and save up more money. Works in the
-          Civilian Conservation Corps, helping starving Americans. "I saw how
-          food changed them", he said. "All of this left scars on me."
-        </li>
-        <li>
-          <b>1937</b>- Finishes university and takes a job in the US Forestry
-          Service
-        </li>
-        <li>
-          <b>1938 </b> - Marries wife of 69 years Margret Gibson. Gets laid off
-          due to budget cuts. Inspired by Elvin Charles Stakman, he returns to
-          school study under Stakman, who teaches him about breeding
-          pest-resistent plants.
-        </li>
-        <li>
-          <b>1941</b>- Tries to enroll in the military after the Pearl Harbor
-          attack, but is rejected. Instead, the military asked his lab to work
-          on waterproof glue, DDT to control malaria, disinfectants, and other
-          applied science.
-        </li>
-        <li><b>1942</b> - Receives a Ph.D. in Genetics and Plant Pathology</li>
-        <li>
-          <b>1944</b> - Rejects a 100% salary increase from Dupont, leaves
-          behind his pregnant wife, and flies to Mexico to head a new plant
-          pathology program. Over the next 16 years, his team breeds 6,000
-          different strains of disease resistent wheat - including different
-          varieties for each major climate on Earth.
-        </li>
-        <li>
-          <b>1945</b> - Discovers a way to grown wheat twice each season,
-          doubling wheat yields
-        </li>
-        <li>
-          <b>1953</b> - crosses a short, sturdy dwarf breed of wheat with a
-          high-yeidling American breed, creating a strain that responds well to
-          fertilizer. It goes on to provide 95% of Mexico's wheat.
-        </li>
-        <li>
-          <b>1962</b> - Visits Delhi and brings his high-yielding strains of
-          wheat to the Indian subcontinent in time to help mitigate mass
-          starvation due to a rapidly expanding population
-        </li>
-        <li><b>1970</b> - receives the Nobel Peace Prize</li>
-        <li>
-          <b>1983</b> - helps seven African countries dramatically increase
-          their maize and sorghum yields
-        </li>
-        <li>
-          <b>1984</b>- becomes a distinguished professor at Texas A&M University
-        </li>
-        <li>
-          <b>2005</b>- states "we will have to double the world food supply by
-          2050." Argues that genetically modified crops are the only way we can
-          meet the demand, as we run out of arable land. Says that GM crops are
-          not inherently dangerous because "we've been genetically modifying
-          plants and animals for a long time. Long before we called it science,
-          people were selecting the best breeds."
-        </li>
-        <li><b>2009</b> - dies at the age of 95.</li>
+        <div class="dropdown-div">
+          <label for="role"
+            >Which option best describes your current role?</label
+          >
+          <select name="role" id="dropdown">
+            <option value="" disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="full time job">Full Time Job</option>
+            <option value="full time learner">Full Time Learner</option>
+            <option value="prefer not to say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <p>Would you recommend freeCodeCamp to a friend?</p>
 
-        <i
-          >"Borlaug's life and achievement are testimony to the far-reaching
-          contribution that one man's towering intellect, persistence and
-          scientific vision can make to human peace and progress." <br /><br />
-          -- Indian Prime Minister Manmohan Singh</i
-        >
-      </ul>
+        <div class="radio-option">
+          <input
+            type="radio"
+            id="definitely"
+            name="recommendation"
+            value="Definitely"
+          /><label for="definitely"> Definitely</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="maybe" name="recommendation" value="Maybe" />
+          <label for="maybe">Maybe</label>
+        </div>
+        <div class="radio-option">
+          <input
+            type="radio"
+            id="not-sure"
+            name="recommendation"
+            value="Not sure"
+          /><label for="not-sure"> Not sure</label>
+        </div>
 
-      <h2>
-        If you have time, you should read more about this incredible human being
-        on his
-        <a
-          id="tribute-link"
-          href="https://en.wikipedia.org/wiki/Norman_Borlaug"
-          target="_blank"
-          >Wikipedia entry</a
-        >.
-      </h2>
+        <div class="dropdown-div">
+          <label for="role"
+            >What is your favorite feature of freeCodeCamp?</label
+          >
+
+          <select name="role" id="role">
+            <option value="" disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open-source">Open Source</option>
+          </select>
+        </div>
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="front-end-projects"
+          value="front-end-projects"
+        />
+        <label for="front-end-projects">Front-end Projects</label></div>
+</div>
+ <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="back-end-projects"
+          value="back-end-projects"
+        /><label for="back-end-projects"> Back-end Projects</label></div>
+ <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="data-visualization"
+          value="data-visualization"
+        /><label for="data-visualization"> Data Visualization</label></div>
+ <div class="checkbox-div">
+        <input type="checkbox" name="challenges" value="challenges" />
+        <label for="challenges">Challenges</label></div>
+ <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="open-source-community"
+          value="open-source-community"
+        /><label for="open-source-community"> Open Source Community</label></div>
+ <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="gitter-help-rooms"
+          value="gitter-help-rooms"
+        />
+        <label for="gitter-help-rooms">Gitter help rooms</label></div>
+ <div class="checkbox-div">
+        <input type="checkbox" name="videos" value="videos" />
+        <label for="videos">Videos</label></div>
+ <div class="checkbox-div">
+        <input type="checkbox" name="city-meetups" value="city-meetups" />
+        <label for="city-meetups">City Meetups</label></div>
+ <div class="checkbox-div">
+        <input type="checkbox" name="wiki" value="wiki" /><label for="wiki"
+          > Wiki</label
+        ></div>
+ <div class="checkbox-div">
+        <input type="checkbox" name="forum" value="forum" />
+        <label for="forum">Forum</label>
+ <div class="checkbox-div">
+        <input
+          type="checkbox"
+          name="additional-courses"
+          value="additional-courses"
+        />
+        <label for="additional-courses">Additional Courses</label>
+</div>
+
+      <div class="suggestion-div">
+        <label for="suggestion">Any comments or suggestions?</label>
+        <textarea
+          name="suggestion"
+          id="suggestion"
+          placeholder="Enter your comment here..."
+        ></textarea>
+</div>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
     </main>
+
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
