@@ -32,3 +32,9 @@ li {
   margin-right: auto;
   max-width: 100%;
 }
+
+@media (max-width: 720px){
+  ul{
+    margin: 0 10%;
+  }
+}
